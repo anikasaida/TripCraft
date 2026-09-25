@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packing Checklist - TripCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">✈️ TripCraft</div>
+
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="planner.html">Plan Trip</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="packing.html" class="active">Packing</a></li>
+        <li><a href="my-trips.html">My Trips</a></li>
+    </ul>
+
+    <button class="theme-btn" id="themeBtn">🌙</button>
+</nav>
+
+
+</header>
+
+<main>
+
+
+<section class="page-header">
+    <span>🎒 PACK SMART</span>
+    <h1>Travel Packing Checklist</h1>
+    <p>Make sure you have everything you need before your journey.</p>
+</section>
+
+<section class="packing-section">
+
+    <div class="packing-header">
+
+        <div>
+            <h2>My Packing List</h2>
+            <p id="packingCount">0 of 0 items packed</p>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="packingProgress"></div>
+            </div>
+            <span id="progressText">0%</span>
+        </div>
+
+    </div>
+
+
+    <!-- Add Item -->
+    <div class="add-item">
+
+        <input
+            type="text"
+            id="newItem"
+            placeholder="Add a packing item..."
+        >
+
+        <select id="itemCategory">
+            <option value="Essentials">Essentials</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Toiletries">Toiletries</option>
+            <option value="Documents">Documents</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <button class="btn primary-btn" id="addItemBtn">
+            + Add Item
+        </button>
+
+    </div>
+
+
+    <!-- Checklist -->
+    <div class="packing-list" id="packingList">
+
+        <div class="packing-category">
+
+            <h3>📄 Documents</h3>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Passport / National ID</span>
+            </label>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Travel Tickets</span>
+            </label>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Hotel Booking</span>
+            </label>
+
+        </div>
+
+
+        <div class="packing-category">
+
+            <h3>👕 Clothing</h3>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>T-Shirts</span>
+            </label>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Pants</span>
+            </label>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Jacket</span>
+            </label>
+
+        </div>
+
+
+        <div class="packing-category">
+
+            <h3>🔌 Electronics</h3>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Smartphone</span>
+            </label>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Phone Charger</span>
+            </label>
+
+            <label class="packing-item">
+                <input type="checkbox">
+                <span>Power Bank</span>
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <p>© 2026 TripCraft. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+<script src="js/packing.js"></script>
+
+</body>
+</html>

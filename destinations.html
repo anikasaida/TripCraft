@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - TripCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">✈️ TripCraft</div>
+
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="planner.html">Plan Trip</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="packing.html">Packing</a></li>
+        <li><a href="my-trips.html">My Trips</a></li>
+    </ul>
+
+    <button class="theme-btn" id="themeBtn">🌙</button>
+</nav>
+
+
+</header>
+
+<main>
+
+
+<!-- Page Header -->
+<section class="page-header">
+    <span>🌍 EXPLORE THE WORLD</span>
+    <h1>Discover Your Next Destination</h1>
+    <p>
+        Find beautiful places and start planning your next adventure.
+    </p>
+</section>
+
+<!-- Search -->
+<section class="search-section">
+    <input
+        type="text"
+        id="destinationSearch"
+        placeholder="🔍 Search destinations..."
+    >
+
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="beach">Beach</option>
+        <option value="mountain">Mountain</option>
+        <option value="nature">Nature</option>
+        <option value="historical">Historical</option>
+    </select>
+</section>
+
+<!-- Destination Cards -->
+<section class="section">
+
+    <div class="destination-grid" id="destinationContainer">
+
+        <div class="destination-card destination-item" data-category="beach">
+            <img src="images/coxs-bazar.jpg" alt="Cox's Bazar">
+
+            <div class="destination-info">
+                <span class="tag">🏖️ Beach</span>
+                <h3>Cox's Bazar</h3>
+                <p>📍 Bangladesh</p>
+
+                <p>
+                    Enjoy the beautiful coastline, sunset and
+                    peaceful beaches.
+                </p>
+
+                <div class="destination-meta">
+                    <span>💰 ৳8,000+</span>
+                    <span>☀️ Nov-Feb</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="save-btn">♡ Save</button>
+                    <a href="planner.html" class="btn small-btn">
+                        Plan Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="destination-card destination-item" data-category="mountain">
+            <img src="images/sajek.jpg" alt="Sajek Valley">
+
+            <div class="destination-info">
+                <span class="tag">⛰️ Mountain</span>
+                <h3>Sajek Valley</h3>
+                <p>📍 Rangamati, Bangladesh</p>
+
+                <p>
+                    Experience clouds, hills, sunrise and beautiful
+                    natural landscapes.
+                </p>
+
+                <div class="destination-meta">
+                    <span>💰 ৳6,000+</span>
+                    <span>☀️ Oct-Mar</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="save-btn">♡ Save</button>
+                    <a href="planner.html" class="btn small-btn">
+                        Plan Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="destination-card destination-item" data-category="nature">
+            <img src="images/sylhet.jpg" alt="Sylhet">
+
+            <div class="destination-info">
+                <span class="tag">🌿 Nature</span>
+                <h3>Sylhet</h3>
+                <p>📍 Bangladesh</p>
+
+                <p>
+                    Explore tea gardens, waterfalls and beautiful
+                    green landscapes.
+                </p>
+
+                <div class="destination-meta">
+                    <span>💰 ৳7,000+</span>
+                    <span>☀️ Oct-Apr</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="save-btn">♡ Save</button>
+                    <a href="planner.html" class="btn small-btn">
+                        Plan Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="destination-card destination-item" data-category="mountain">
+            <img src="images/bandarban.jpg" alt="Bandarban">
+
+            <div class="destination-info">
+                <span class="tag">⛰️ Mountain</span>
+                <h3>Bandarban</h3>
+                <p>📍 Bangladesh</p>
+
+                <p>
+                    Discover hills, waterfalls and adventurous
+                    trekking routes.
+                </p>
+
+                <div class="destination-meta">
+                    <span>💰 ৳7,500+</span>
+                    <span>☀️ Oct-Mar</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="save-btn">♡ Save</button>
+                    <a href="planner.html" class="btn small-btn">
+                        Plan Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="destination-card destination-item" data-category="historical">
+            <img src="images/paris.jpg" alt="Paris">
+
+            <div class="destination-info">
+                <span class="tag">🏛️ Historical</span>
+                <h3>Paris</h3>
+                <p>📍 France</p>
+
+                <p>
+                    Explore iconic landmarks, museums and
+                    beautiful architecture.
+                </p>
+
+                <div class="destination-meta">
+                    <span>💰 ৳120,000+</span>
+                    <span>☀️ Apr-Jun</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="save-btn">♡ Save</button>
+                    <a href="planner.html" class="btn small-btn">
+                        Plan Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="destination-card destination-item" data-category="beach">
+            <img src="images/bali.jpg" alt="Bali">
+
+            <div class="destination-info">
+                <span class="tag">🏖️ Beach</span>
+                <h3>Bali</h3>
+                <p>📍 Indonesia</p>
+
+                <p>
+                    Enjoy beaches, temples, culture and tropical
+                    landscapes.
+                </p>
+
+                <div class="destination-meta">
+                    <span>💰 ৳70,000+</span>
+                    <span>☀️ Apr-Oct</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="save-btn">♡ Save</button>
+                    <a href="planner.html" class="btn small-btn">
+                        Plan Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <p>© 2026 TripCraft. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+<script src="js/destinations.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Budget - TripCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">✈️ TripCraft</div>
+
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="planner.html">Plan Trip</a></li>
+        <li><a href="budget.html" class="active">Budget</a></li>
+        <li><a href="packing.html">Packing</a></li>
+        <li><a href="my-trips.html">My Trips</a></li>
+    </ul>
+
+    <button class="theme-btn" id="themeBtn">🌙</button>
+</nav>
+
+
+</header>
+
+<main>
+
+
+<section class="page-header">
+    <span>💰 SMART TRAVEL BUDGET</span>
+    <h1>Calculate Your Travel Budget</h1>
+    <p>Know your estimated travel expenses before you go.</p>
+</section>
+
+<section class="budget-section">
+
+    <div class="budget-form">
+
+        <h2>Expense Details</h2>
+
+        <div class="form-group">
+            <label>Transportation</label>
+            <input type="number" id="transport" placeholder="৳ 0">
+        </div>
+
+        <div class="form-group">
+            <label>Accommodation</label>
+            <input type="number" id="hotel" placeholder="৳ 0">
+        </div>
+
+        <div class="form-group">
+            <label>Food</label>
+            <input type="number" id="food" placeholder="৳ 0">
+        </div>
+
+        <div class="form-group">
+            <label>Activities</label>
+            <input type="number" id="activities" placeholder="৳ 0">
+        </div>
+
+        <div class="form-group">
+            <label>Shopping</label>
+            <input type="number" id="shopping" placeholder="৳ 0">
+        </div>
+
+        <div class="form-group">
+            <label>Other Expenses</label>
+            <input type="number" id="other" placeholder="৳ 0">
+        </div>
+
+        <button class="btn primary-btn" id="calculateBtn">
+            Calculate Budget
+        </button>
+
+    </div>
+
+
+    <div class="budget-result">
+
+        <div class="total-budget">
+            <span>Total Estimated Budget</span>
+            <h2 id="totalBudget">৳ 0</h2>
+        </div>
+
+        <div class="budget-details">
+
+            <div class="budget-item">
+                <span>🚗 Transportation</span>
+                <strong id="transportResult">৳ 0</strong>
+            </div>
+
+            <div class="budget-item">
+                <span>🏨 Accommodation</span>
+                <strong id="hotelResult">৳ 0</strong>
+            </div>
+
+            <div class="budget-item">
+                <span>🍴 Food</span>
+                <strong id="foodResult">৳ 0</strong>
+            </div>
+
+            <div class="budget-item">
+                <span>🎟️ Activities</span>
+                <strong id="activitiesResult">৳ 0</strong>
+            </div>
+
+            <div class="budget-item">
+                <span>🛍️ Shopping</span>
+                <strong id="shoppingResult">৳ 0</strong>
+            </div>
+
+            <div class="budget-item">
+                <span>📦 Other</span>
+                <strong id="otherResult">৳ 0</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <p>© 2026 TripCraft. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+<script src="js/budget.js"></script>
+
+</body>
+</html>

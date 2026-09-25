@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips - TripCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+
+
+    <div class="logo">✈️ TripCraft</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="planner.html">Plan Trip</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="packing.html">Packing</a></li>
+        <li><a href="my-trips.html" class="active">My Trips</a></li>
+    </ul>
+
+    <button class="theme-btn" id="themeBtn">🌙</button>
+
+</nav>
+
+
+</header>
+
+<main>
+
+
+<section class="page-header">
+    <span>💙 YOUR TRAVEL SPACE</span>
+    <h1>My Trips</h1>
+    <p>View and manage all your planned journeys.</p>
+</section>
+
+
+<section class="section">
+
+    <div class="trip-actions">
+
+        <div>
+            <h2>Saved Trips</h2>
+            <p>Your personalized travel plans.</p>
+        </div>
+
+        <a href="planner.html" class="btn primary-btn">
+            + Create New Trip
+        </a>
+
+    </div>
+
+
+    <div class="my-trips-grid" id="myTripsContainer">
+
+        <!-- Example Trip -->
+
+        <div class="trip-card">
+
+            <div class="trip-image">
+                <img src="images/coxs-bazar.jpg" alt="Cox's Bazar">
+            </div>
+
+            <div class="trip-info">
+
+                <span class="tag">🏖️ Beach Trip</span>
+
+                <h3>Cox's Bazar Adventure</h3>
+
+                <p>📍 Cox's Bazar, Bangladesh</p>
+
+                <p>📅 10 Oct - 13 Oct 2026</p>
+
+                <p>👥 3 Travelers</p>
+
+                <div class="trip-budget">
+                    <span>Total Budget</span>
+                    <strong>৳35,000</strong>
+                </div>
+
+                <div class="trip-buttons">
+                    <button class="btn small-btn">
+                        View Trip
+                    </button>
+
+                    <button class="delete-trip">
+                        🗑️ Delete
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="trip-card">
+
+            <div class="trip-image">
+                <img src="images/sajek.jpg" alt="Sajek">
+            </div>
+
+            <div class="trip-info">
+
+                <span class="tag">⛰️ Mountain Trip</span>
+
+                <h3>Sajek Weekend</h3>
+
+                <p>📍 Sajek Valley, Bangladesh</p>
+
+                <p>📅 20 Nov - 22 Nov 2026</p>
+
+                <p>👥 4 Travelers</p>
+
+                <div class="trip-budget">
+                    <span>Total Budget</span>
+                    <strong>৳24,000</strong>
+                </div>
+
+                <div class="trip-buttons">
+                    <button class="btn small-btn">
+                        View Trip
+                    </button>
+
+                    <button class="delete-trip">
+                        🗑️ Delete
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Empty State -->
+
+    <div class="empty-state" id="emptyTrips" style="display:none;">
+
+        <div>🗺️</div>
+
+        <h2>No Trips Yet</h2>
+
+        <p>
+            You haven't created any trips yet.
+            Start planning your next adventure!
+        </p>
+
+        <a href="planner.html" class="btn primary-btn">
+            Create Your First Trip
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <p>© 2026 TripCraft. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+<script src="js/my-trips.js"></script>
+
+</body>
+</html>
