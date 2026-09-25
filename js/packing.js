@@ -579,9 +579,6 @@ if (packingCount) {
 
 }
 
-/* =========================
-12. ESCAPE HTML
-========================= */
 
 function escapeHTML(value) {
 
