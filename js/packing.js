@@ -1,86 +1,54 @@
-const newItemInput =
-document.getElementById("newItem");
-
-const itemCategory =
-document.getElementById("itemCategory");
-
-const addItemBtn =
-document.getElementById("addItemBtn");
-
-const packingList =
-document.getElementById("packingList");
-
-const packingProgress =
-document.getElementById("packingProgress");
-
-const progressText =
-document.getElementById("progressText");
-
-const packingCount =
-document.getElementById("packingCount");
-
-/* =========================
-2. STORAGE KEY
-========================= */
-
-const PACKING_STORAGE_KEY =
-"tripcraft-packing-list";
-
-/* =========================
-3. DEFAULT ITEMS
-========================= */
-
+const newItemInput = document.getElementById("newItem");
+const itemCategory =document.getElementById("itemCategory");
+const addItemBtn =document.getElementById("addItemBtn");
+const packingList =document.getElementById("packingList");
+const packingProgress = document.getElementById("packingProgress");
+const progressText = document.getElementById("progressText");
+const packingCount = document.getElementById("packingCount");
+const PACKING_STORAGE_KEY = "tripcraft-packing-list";
 const defaultItems = [
-
 {
     id: 1,
     name: "Passport / National ID",
     category: "Documents",
     checked: false
 },
-
 {
     id: 2,
     name: "Travel Tickets",
     category: "Documents",
     checked: false
 },
-
 {
     id: 3,
     name: "Hotel Booking",
     category: "Documents",
     checked: false
 },
-
 {
     id: 4,
     name: "T-Shirts",
     category: "Clothing",
     checked: false
 },
-
 {
     id: 5,
     name: "Pants",
     category: "Clothing",
     checked: false
 },
-
 {
     id: 6,
     name: "Jacket",
     category: "Clothing",
     checked: false
 },
-
 {
     id: 7,
     name: "Smartphone",
     category: "Electronics",
     checked: false
 },
-
 {
     id: 8,
     name: "Phone Charger",
@@ -97,118 +65,51 @@ const defaultItems = [
 
 ];
 
-/* =========================
-4. PACKING DATA
-========================= */
 
 let packingItems = [];
-
-/* =========================
-5. LOAD PACKING DATA
-========================= */
-
 function loadPackingItems() {
-
-const savedItems =
-    localStorage.getItem(
-        PACKING_STORAGE_KEY
-    );
-
-
+const savedItems = localStorage.getItem( PACKING_STORAGE_KEY);
 if (savedItems) {
-
-    try {
-
-        packingItems =
-            JSON.parse(savedItems);
-
+    try { packingItems = JSON.parse(savedItems);
     } catch (error) {
-
-        console.error(
-            "Could not load packing data:",
-            error
-        );
-
-        packingItems =
-            [...defaultItems];
+        console.error("Could not load packing data:", error );
+        packingItems =[...defaultItems];
     }
 
 } else {
-
-    packingItems =
-        [...defaultItems];
+    packingItems = [...defaultItems];
 }
-
-
 renderPackingList();
-
 }
-
-/* =========================
-6. SAVE PACKING DATA
-========================= */
 
 function savePackingItems() {
-
-localStorage.setItem(
-    PACKING_STORAGE_KEY,
-    JSON.stringify(
-        packingItems
-    )
-);
+localStorage.setItem( PACKING_STORAGE_KEY,JSON.stringify( packingItems  ));
 
 }
-
-/* =========================
-7. ADD NEW ITEM
-========================= */
 
 if (addItemBtn) {
-
-addItemBtn.addEventListener(
-    "click",
-    addPackingItem
-);
-
+    addItemBtn.addEventListener("click", addPackingItem);
 }
 
-/* Enter key support */
-
 if (newItemInput) {
-
-newItemInput.addEventListener(
-    "keydown",
+newItemInput.addEventListener("keydown",
     function (event) {
-
         if (event.key === "Enter") {
-
             addPackingItem();
 
         }
-
     }
 );
-
 }
 
 function addPackingItem() {
-
 if (!newItemInput) {
     return;
 }
-
-
-const itemName =
-    newItemInput.value.trim();
-
-
-const category =
-    itemCategory
+const itemName = newItemInput.value.trim();
+const category = itemCategory
         ? itemCategory.value
         : "Other";
-
-
-/* Validation */
 
 if (!itemName) {
 

@@ -192,12 +192,8 @@ if (shoppingResult) {
 }
 
 if (otherResult) {
-    otherResult.textContent =
-        formatCurrency(
-            budget.other || 0
-        );
+    otherResult.textContent = formatCurrency( budget.other || 0 );
 }
-
 }
 
 /* =========================
@@ -230,20 +226,9 @@ function (input) {
 
 );
 
-/* =========================
-10. INITIALIZE
-========================= */
-
-document.addEventListener(
-"DOMContentLoaded",
+document.addEventListener( "DOMContentLoaded",
 function () {
-
     loadSavedBudget();
-
-    console.log(
-        "💰 Budget calculator loaded."
-    );
-
+    console.log( "💰 Budget calculator loaded." );
 }
-
 );

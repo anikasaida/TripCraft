@@ -1,90 +1,31 @@
-const myTripsContainer =
-document.getElementById(
-"myTripsContainer"
-);
-
-const emptyTrips =
-document.getElementById(
-"emptyTrips"
-);
-
-/* =========================
-2. STORAGE KEY
-========================= */
-
-const TRIPS_STORAGE_KEY =
-"tripcraft-trips";
-
-/* =========================
-3. GET SAVED TRIPS
-========================= */
+const myTripsContainer =document.getElementById("myTripsContainer");
+const emptyTrips =document.getElementById("emptyTrips");
+const TRIPS_STORAGE_KEY ="tripcraft-trips";
 
 function getSavedTrips() {
-
-const savedTrips =
-    localStorage.getItem(
-        TRIPS_STORAGE_KEY
-    );
-
-
+const savedTrips = localStorage.getItem( TRIPS_STORAGE_KEY );
 if (!savedTrips) {
     return [];
 }
-
-
 try {
-
-    return JSON.parse(
-        savedTrips
-    );
-
+    return JSON.parse( savedTrips);
 } catch (error) {
-
-    console.error(
-        "Could not load trips:",
-        error
-    );
-
+    console.error("Could not load trips:", error );
     return [];
-}
-
-}
-
-/* =========================
-4. SAVE TRIPS
-========================= */
+}}
 
 function saveTrips(trips) {
-
-localStorage.setItem(
-    TRIPS_STORAGE_KEY,
-    JSON.stringify(trips)
-);
-
+localStorage.setItem( TRIPS_STORAGE_KEY, JSON.stringify(trips));
 }
 
-/* =========================
-5. FORMAT DATE
-========================= */
-
 function formatDate(dateString) {
-
 if (!dateString) {
     return "Not specified";
 }
-
-
-const date =
-    new Date(
-        dateString + "T00:00:00"
-    );
-
-
+const date = new Date( dateString + "T00:00:00" );
 if (isNaN(date.getTime())) {
     return dateString;
 }
-
-
 return date.toLocaleDateString(
     "en-GB",
     {
@@ -93,66 +34,26 @@ return date.toLocaleDateString(
         year: "numeric"
     }
 );
-
 }
 
-/* =========================
-6. CALCULATE DURATION
-========================= */
-
-function calculateDuration(
-startDate,
-endDate
-) {
-
+function calculateDuration(startDate,endDate) {
 if (!startDate || !endDate) {
     return 0;
 }
-
-
-const start =
-    new Date(
-        startDate + "T00:00:00"
-    );
-
-const end =
-    new Date(
-        endDate + "T00:00:00"
-    );
-
-
-const difference =
-    end.getTime() -
-    start.getTime();
-
-
-const days =
-    Math.floor(
-        difference /
-        (1000 * 60 * 60 * 24)
-    );
-
-
+const start =new Date(startDate + "T00:00:00");
+const end = new Date(endDate + "T00:00:00" );
+const difference = end.getTime() - start.getTime();
+const days = Math.floor( difference / (1000 * 60 * 60 * 24));
 return days + 1;
-
 }
-
-/* =========================
-7. GET DESTINATION IMAGE
-========================= */
-
 function getDestinationImage(
 destination
 ) {
-
 if (!destination) {
-
     return "images/hero.jpg";
 }
 
-
 const destinationImages = {
-
     "Cox's Bazar":
         "images/coxs-bazar.jpg",
 
@@ -177,184 +78,74 @@ const destinationImages = {
 };
 
 
-return (
-    destinationImages[
-        destination
-    ] ||
+return ( destinationImages[  destination ] ||
     "images/hero.jpg"
 );
 
 }
 
-/* =========================
-8. GET TRIP TYPE
-========================= */
-
-function getTripType(
-destination
-) {
-
+function getTripType( destination ) {
 const beachPlaces = [
     "Cox's Bazar",
     "Bali"
 ];
-
 
 const mountainPlaces = [
     "Sajek Valley",
     "Bandarban"
 ];
 
-
-if (
-    beachPlaces.includes(
-        destination
-    )
-) {
-
-    return "🏖️ Beach Trip";
+if ( beachPlaces.includes( destination)) {
+    return " Beach Trip";
 }
 
-
-if (
-    mountainPlaces.includes(
-        destination
-    )
-) {
-
-    return "⛰️ Mountain Trip";
+if ( mountainPlaces.includes(destination)){
+    return " Mountain Trip";
 }
-
-
-return "🌍 Travel Trip";
-
+return " Travel Trip";
 }
-
-/* =========================
-9. DISPLAY TRIPS
-========================= */
 
 function renderTrips() {
-
 if (!myTripsContainer) {
     return;
 }
-
-
-const trips =
-    getSavedTrips();
-
-
-/* Clear container */
+const trips = getSavedTrips();
 
 myTripsContainer.innerHTML = "";
 
-
-/* No trips */
-
 if (trips.length === 0) {
-
-    myTripsContainer.style.display =
-        "none";
-
-
+    myTripsContainer.style.display = "none";
     if (emptyTrips) {
-
-        emptyTrips.style.display =
-            "block";
+        emptyTrips.style.display =  "block";     
     }
-
-
     return;
 }
 
-
-/* Show trips */
-
-myTripsContainer.style.display =
-    "grid";
-
-
+myTripsContainer.style.display = "grid";   
 if (emptyTrips) {
-
-    emptyTrips.style.display =
-        "none";
+    emptyTrips.style.display = "none";     
 }
 
-
-/* Display newest first */
-
-const sortedTrips =
-    [...trips].reverse();
-
-
+const sortedTrips = [...trips].reverse(); 
 sortedTrips.forEach(
     function (trip) {
-
-        const card =
-            createTripCard(trip);
-
-
-        myTripsContainer.appendChild(
-            card
-        );
-
+        const card = createTripCard(trip);
+        myTripsContainer.appendChild( card  );
     }
 );
-
 }
-
-/* =========================
-10. CREATE TRIP CARD
-========================= */
-
 function createTripCard(trip) {
+const card = document.createElement( "div"  );
+card.className = "trip-card";
 
-const card =
-    document.createElement(
-        "div"
-    );
-
-
-card.className =
-    "trip-card";
-
-
-const image =
-    getDestinationImage(
-        trip.destination
-    );
-
-
-const tripType =
-    getTripType(
-        trip.destination
-    );
-
-
-const duration =
-    calculateDuration(
-        trip.startDate,
-        trip.endDate
-    );
-
-
-const activityCount =
-    Array.isArray(
-        trip.itinerary
-    )
-        ? trip.itinerary.length
-        : 0;
-
-
-const budget =
-    Number(
-        trip.budget
-    ) || 0;
-
+const image = getDestinationImage(trip.destination );
+const tripType = getTripType( trip.destination);
+const duration = calculateDuration(trip.startDate,trip.endDate);
+const activityCount = Array.isArray(trip.itinerary)
+        ? trip.itinerary.length : 0;
+const budget = Number(trip.budget ) || 0;
 
 card.innerHTML = `
-
     <div class="trip-image">
 
         <img
@@ -484,32 +275,12 @@ card.innerHTML = `
 
 `;
 
-
-/* =========================
-   VIEW BUTTON
-   ========================= */
-
-const viewButton =
-    card.querySelector(
-        ".view-trip"
-    );
-
-
-viewButton.addEventListener(
-    "click",
+const viewButton = card.querySelector(".view-trip");
+viewButton.addEventListener("click",
     function () {
-
-        showTripDetails(
-            trip
-        );
-
+        showTripDetails(trip);
     }
 );
-
-
-/* =========================
-   DELETE BUTTON
-   ========================= */
 
 const deleteButton =
     card.querySelector(
@@ -540,33 +311,13 @@ return card;
 function showTripDetails(
 trip
 ) {
-
-const duration =
-    calculateDuration(
-        trip.startDate,
-        trip.endDate
-    );
-
-
-let itineraryHTML =
-    "";
-
-
-if (
-    Array.isArray(
-        trip.itinerary
-    ) &&
-    trip.itinerary.length > 0
-) {
-
-    itineraryHTML =
-        trip.itinerary
-            .map(
-                function (
+const duration = calculateDuration( trip.startDate,trip.endDate);
+let itineraryHTML = "";
+if ( Array.isArray(trip.itinerary) &&trip.itinerary.length > 0) {
+  itineraryHTML =trip.itinerary.map(function (
                     activity,
                     index
                 ) {
-
                     return `
 
                         <div style="
@@ -629,10 +380,6 @@ if (
         </p>
     `;
 }
-
-
-/* Create modal */
-
 const modal =
     document.createElement(
         "div"
