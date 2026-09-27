@@ -1,140 +1,244 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Budget - TripCraft</title>
+    <title>Budget - TripCraft</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
     <nav class="navbar">
-        <div class="logo">✈️ TripCraft</div>
-
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="planner.html">Plan Trip</a></li>
-        <li><a href="budget.html" class="active">Budget</a></li>
-        <li><a href="packing.html">Packing</a></li>
-        <li><a href="my-trips.html">My Trips</a></li>
-    </ul>
-
-    <button class="theme-btn" id="themeBtn">🌙</button>
-</nav>
-
-
-</header>
-
-<main>
-
-
-<section class="page-header">
-    <span>💰 SMART TRAVEL BUDGET</span>
-    <h1>Calculate Your Travel Budget</h1>
-    <p>Know your estimated travel expenses before you go.</p>
-</section>
-
-<section class="budget-section">
-
-    <div class="budget-form">
-
-        <h2>Expense Details</h2>
-
-        <div class="form-group">
-            <label>Transportation</label>
-            <input type="number" id="transport" placeholder="৳ 0">
+        <div class="logo">
+            ✈️ TripCraft
         </div>
 
-        <div class="form-group">
-            <label>Accommodation</label>
-            <input type="number" id="hotel" placeholder="৳ 0">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="destinations.html"> Destinations </a>
+            <a href="planner.html"> Planner </a>
+            <a href="budget.html"> Budget </a>
+            <a href="packing.html"> Packing </a>
+            <a href="my-trips.html"> My Trips </a>
+            <button id="themeBtn" class="theme-btn">🌙 </button>
         </div>
 
-        <div class="form-group">
-            <label>Food</label>
-            <input type="number" id="food" placeholder="৳ 0">
-        </div>
+    </nav>
 
-        <div class="form-group">
-            <label>Activities</label>
-            <input type="number" id="activities" placeholder="৳ 0">
-        </div>
+    <section class="page-header">
+        <h1> Travel Budget </h1>
+        <p> Calculate your estimated travel expenses. </p>
+    </section>
 
-        <div class="form-group">
-            <label>Shopping</label>
-            <input type="number" id="shopping" placeholder="৳ 0">
-        </div>
+    <section class="section">
+        <div class="budget-container">
+            <div class="form-card">
+                <h2>Enter Your Expenses </h2>
+                <div class="form-group">
+                    <label for="transport"> Transport </label>
+                    <input type="number" id="transport" placeholder="Enter amount" min="0">
+                </div>
 
-        <div class="form-group">
-            <label>Other Expenses</label>
-            <input type="number" id="other" placeholder="৳ 0">
-        </div>
-
-        <button class="btn primary-btn" id="calculateBtn">
-            Calculate Budget
-        </button>
-
-    </div>
+                <div class="form-group">
+                    <label for="hotel"> Hotel</label>
+                    <input type="number" id="hotel" placeholder="Enter amount" min="0">
+                </div>
 
 
-    <div class="budget-result">
+                <div class="form-group">
 
-        <div class="total-budget">
-            <span>Total Estimated Budget</span>
-            <h2 id="totalBudget">৳ 0</h2>
-        </div>
+                    <label for="food">
+                        Food
+                    </label>
 
-        <div class="budget-details">
+                    <input
+                        type="number"
+                        id="food"
+                        placeholder="Enter amount"
+                        min="0"
+                    >
 
-            <div class="budget-item">
-                <span>🚗 Transportation</span>
-                <strong id="transportResult">৳ 0</strong>
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="activities">
+                        Activities
+                    </label>
+
+                    <input
+                        type="number"
+                        id="activities"
+                        placeholder="Enter amount"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="shopping">
+                        Shopping
+                    </label>
+
+                    <input
+                        type="number"
+                        id="shopping"
+                        placeholder="Enter amount"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="other">
+                        Other
+                    </label>
+
+                    <input
+                        type="number"
+                        id="other"
+                        placeholder="Enter amount"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <button
+                    id="calculateBtn"
+                    class="btn">
+
+                    Calculate Budget
+
+                </button>
+
+
             </div>
 
-            <div class="budget-item">
-                <span>🏨 Accommodation</span>
-                <strong id="hotelResult">৳ 0</strong>
+
+
+            <div class="budget-result">
+
+                <h2>
+                    Budget Summary
+                </h2>
+
+
+                <div class="budget-row">
+
+                    <span>
+                        Transport
+                    </span>
+
+                    <span id="transportResult">
+                        ৳ 0
+                    </span>
+
+                </div>
+
+
+                <div class="budget-row">
+
+                    <span>
+                        Hotel
+                    </span>
+
+                    <span id="hotelResult">
+                        ৳ 0
+                    </span>
+
+                </div>
+
+
+                <div class="budget-row">
+
+                    <span>
+                        Food
+                    </span>
+
+                    <span id="foodResult">
+                        ৳ 0
+                    </span>
+
+                </div>
+
+
+                <div class="budget-row">
+
+                    <span>
+                        Activities
+                    </span>
+
+                    <span id="activitiesResult">
+                        ৳ 0
+                    </span>
+
+                </div>
+
+
+                <div class="budget-row">
+
+                    <span>
+                        Shopping
+                    </span>
+
+                    <span id="shoppingResult">
+                        ৳ 0
+                    </span>
+
+                </div>
+
+
+                <div class="budget-row">
+
+                    <span>
+                        Other
+                    </span>
+
+                    <span id="otherResult">
+                        ৳ 0
+                    </span>
+
+                </div>
+
+
+                <div class="total-budget">
+
+                    <span>
+                        Total Budget
+                    </span>
+
+                    <span id="totalBudget">
+                        ৳ 0
+                    </span>
+
+                </div>
+
+
             </div>
 
-            <div class="budget-item">
-                <span>🍴 Food</span>
-                <strong id="foodResult">৳ 0</strong>
-            </div>
-
-            <div class="budget-item">
-                <span>🎟️ Activities</span>
-                <strong id="activitiesResult">৳ 0</strong>
-            </div>
-
-            <div class="budget-item">
-                <span>🛍️ Shopping</span>
-                <strong id="shoppingResult">৳ 0</strong>
-            </div>
-
-            <div class="budget-item">
-                <span>📦 Other</span>
-                <strong id="otherResult">৳ 0</strong>
-            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-</main>
 
-<footer>
-    <div class="footer-bottom">
-        <p>© 2026 TripCraft. All Rights Reserved.</p>
-    </div>
-</footer>
+    <footer>
+        <p> © 2026 TripCraft. All Rights Reserved.</p>
 
-<script src="js/main.js"></script>
-<script src="js/budget.js"></script>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/budget.js"></script>
 
 </body>
+
 </html>

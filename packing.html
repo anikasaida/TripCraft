@@ -1,171 +1,213 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Packing Checklist - TripCraft</title>
+    <title>Packing List - TripCraft</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
     <nav class="navbar">
         <div class="logo">✈️ TripCraft</div>
 
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="planner.html">Plan Trip</a></li>
-        <li><a href="budget.html">Budget</a></li>
-        <li><a href="packing.html" class="active">Packing</a></li>
-        <li><a href="my-trips.html">My Trips</a></li>
-    </ul>
-
-    <button class="theme-btn" id="themeBtn">🌙</button>
-</nav>
-
-
-</header>
-
-<main>
-
-
-<section class="page-header">
-    <span>🎒 PACK SMART</span>
-    <h1>Travel Packing Checklist</h1>
-    <p>Make sure you have everything you need before your journey.</p>
-</section>
-
-<section class="packing-section">
-
-    <div class="packing-header">
-
-        <div>
-            <h2>My Packing List</h2>
-            <p id="packingCount">0 of 0 items packed</p>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="planner.html">Planner</a>
+            <a href="budget.html">Budget</a>
+            <a href="packing.html" class="active">Packing</a>
+            <a href="my-trips.html">My Trips</a>
+            <button id="themeBtn" class="theme-btn">🌙</button>
         </div>
+    </nav>
 
-        <div class="progress-container">
+    <section class="page-header">
+        <h1>Packing List</h1>
+        <p>Make sure you have everything before your trip.</p>
+    </section>
+
+    <section class="section">
+
+        <div class="packing-progress">
+            <h2>Packing Progress</h2>
+            <p id="packingCount">0 of 0 items packed</p>
+
             <div class="progress-bar">
                 <div id="packingProgress"></div>
             </div>
-            <span id="progressText">0%</span>
+
+            <p id="progressText">0%</p>
         </div>
 
-    </div>
+        <div class="add-packing">
+            <h2>➕ Add New Packing Item</h2>
 
+            <div class="packing-form">
 
-    <!-- Add Item -->
-    <div class="add-item">
+                <div class="form-group">
+                    <label for="newItem">Item Name</label>
+                    <input type="text" id="newItem" placeholder="Example: Sunglasses">
+                </div>
 
-        <input
-            type="text"
-            id="newItem"
-            placeholder="Add a packing item..."
-        >
+                <div class="form-group">
+                    <label for="itemCategory">Category</label>
+                    <select id="itemCategory">
+                        <option value="clothes">Clothes</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="personal">Personal Items</option>
+                        <option value="documents">Documents</option>
+                    </select>
+                </div>
 
-        <select id="itemCategory">
-            <option value="Essentials">Essentials</option>
-            <option value="Clothing">Clothing</option>
-            <option value="Electronics">Electronics</option>
-            <option value="Toiletries">Toiletries</option>
-            <option value="Documents">Documents</option>
-            <option value="Other">Other</option>
-        </select>
+                <button id="addItemBtn">+ Add Item</button>
 
-        <button class="btn primary-btn" id="addItemBtn">
-            + Add Item
-        </button>
+            </div>
+        </div>
 
-    </div>
+        <div class="packing-container">
 
+            <div class="packing-category">
+                <h2>👕 Clothes</h2>
 
-    <!-- Checklist -->
-    <div class="packing-list" id="packingList">
+                <label class="packing-item">
+                    <input type="checkbox"> T-Shirts
+                </label>
 
-        <div class="packing-category">
+                <label class="packing-item">
+                    <input type="checkbox"> Pants
+                </label>
 
-            <h3>📄 Documents</h3>
+                <label class="packing-item">
+                    <input type="checkbox"> Jacket
+                </label>
 
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Passport / National ID</span>
-            </label>
+                <label class="packing-item">
+                    <input type="checkbox"> Socks
+                </label>
 
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Travel Tickets</span>
-            </label>
+                <label class="packing-item">
+                    <input type="checkbox"> Underwear
+                </label>
 
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Hotel Booking</span>
-            </label>
+                <label class="packing-item">
+                    <input type="checkbox"> Comfortable Shoes
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Sleepwear
+                </label>
+            </div>
+
+            <div class="packing-category">
+                <h2>📱 Electronics</h2>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Mobile Phone
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Phone Charger
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Power Bank
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Earphones
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Laptop
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Laptop Charger
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Camera
+                </label>
+            </div>
+
+            <div class="packing-category">
+                <h2>🧴 Personal Items</h2>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Toothbrush
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Toothpaste
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Shampoo
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Towel
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Soap
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Sunscreen
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Comb
+                </label>
+            </div>
+
+            <div class="packing-category">
+                <h2>📄 Documents</h2>
+
+                <label class="packing-item">
+                    <input type="checkbox"> ID Card
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Passport
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Tickets
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Hotel Booking
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Driving License
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Emergency Contact
+                </label>
+
+                <label class="packing-item">
+                    <input type="checkbox"> Travel Insurance
+                </label>
+            </div>
 
         </div>
 
+    </section>
 
-        <div class="packing-category">
-
-            <h3>👕 Clothing</h3>
-
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>T-Shirts</span>
-            </label>
-
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Pants</span>
-            </label>
-
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Jacket</span>
-            </label>
-
-        </div>
-
-
-        <div class="packing-category">
-
-            <h3>🔌 Electronics</h3>
-
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Smartphone</span>
-            </label>
-
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Phone Charger</span>
-            </label>
-
-            <label class="packing-item">
-                <input type="checkbox">
-                <span>Power Bank</span>
-            </label>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-</main>
-
-<footer>
-    <div class="footer-bottom">
+    <footer>
         <p>© 2026 TripCraft. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-<script src="js/main.js"></script>
-
-<script src="js/packing.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/packing.js"></script>
 
 </body>
+
 </html>

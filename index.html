@@ -1,200 +1,128 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripCraft - Smart Travel Planner</title>
+    <title>TripCraft - Travel Planner</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- Navbar -->
-<header>
     <nav class="navbar">
-        <div class="logo">
-            ✈️ TripCraft
-        </div>
+        <div class="logo">✈️ TripCraft</div>
 
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="planner.html">Plan Trip</a></li>
-            <li><a href="budget.html">Budget</a></li>
-            <li><a href="packing.html">Packing</a></li>
-            <li><a href="my-trips.html">My Trips</a></li>
-        </ul>
-
-        <button class="theme-btn" id="themeBtn">🌙</button>
-    </nav>
-</header>
-
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <span class="hero-badge">🌍 Your Smart Travel Companion</span>
-
-        <h1>
-            Plan Your Journey.<br>
-            <span>Travel Your Way.</span>
-        </h1>
-
-        <p>
-            Discover amazing destinations, create personalized itineraries,
-            manage your travel budget, and prepare your packing checklist
-            with TripCraft.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="planner.html" class="btn primary-btn">
-                Start Planning ✈️
-            </a>
-
-            <a href="destinations.html" class="btn secondary-btn">
-                Explore Destinations
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Features -->
-<section class="section">
-    <div class="section-title">
-        <span>WHAT WE OFFER</span>
-        <h2>Everything You Need to Plan Your Trip</h2>
-        <p>Simple tools to make your travel planning easier.</p>
-    </div>
-
-    <div class="feature-grid">
-
-        <div class="feature-card">
-            <div class="feature-icon">🗺️</div>
-            <h3>Explore Destinations</h3>
-            <p>
-                Discover beautiful destinations and find useful
-                information for your next adventure.
-            </p>
-            <a href="destinations.html">Explore →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">📅</div>
-            <h3>Plan Your Itinerary</h3>
-            <p>
-                Organize your daily activities and create a personalized
-                travel schedule.
-            </p>
-            <a href="planner.html">Plan Now →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">💰</div>
-            <h3>Manage Your Budget</h3>
-            <p>
-                Calculate transportation, hotel, food and activity
-                expenses easily.
-            </p>
-            <a href="budget.html">Calculate →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">🎒</div>
-            <h3>Packing Checklist</h3>
-            <p>
-                Create a checklist and make sure you never forget
-                important travel items.
-            </p>
-            <a href="packing.html">Pack Smart →</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- Popular Destinations -->
-<section class="section destinations-section">
-
-    <div class="section-title">
-        <span>POPULAR PLACES</span>
-        <h2>Explore Popular Destinations</h2>
-    </div>
-
-    <div class="destination-grid">
-
-        <div class="destination-card">
-            <img src="images/coxs-bazar.jpg" alt="Cox's Bazar">
-            <div class="destination-info">
-                <h3>Cox's Bazar</h3>
-                <p>📍 Bangladesh</p>
-                <p>World's longest natural sea beach.</p>
-                <a href="destinations.html">View Details →</a>
-            </div>
-        </div>
-
-        <div class="destination-card">
-            <img src="images/sajek.jpg" alt="Sajek Valley">
-            <div class="destination-info">
-                <h3>Sajek Valley</h3>
-                <p>📍 Bangladesh</p>
-                <p>Beautiful hills, clouds and nature.</p>
-                <a href="destinations.html">View Details →</a>
-            </div>
-        </div>
-
-        <div class="destination-card">
-            <img src="images/sylhet.jpg" alt="Sylhet">
-            <div class="destination-info">
-                <h3>Sylhet</h3>
-                <p>📍 Bangladesh</p>
-                <p>Tea gardens, waterfalls and green landscapes.</p>
-                <a href="destinations.html">View Details →</a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-    <div>
-        <h2>Ready for Your Next Adventure?</h2>
-        <p>Create your perfect trip with TripCraft.</p>
-        <a href="planner.html" class="btn primary-btn">
-            Create My Trip ✈️
-        </a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <div>
-            <h3>✈️ TripCraft</h3>
-            <p>Your smart companion for better travel planning.</p>
-        </div>
-
-        <div>
-            <h4>Quick Links</h4>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
             <a href="destinations.html">Destinations</a>
-            <a href="planner.html">Plan Trip</a>
+            <a href="planner.html">Planner</a>
             <a href="budget.html">Budget</a>
             <a href="packing.html">Packing</a>
+            <a href="my-trips.html">My Trips</a>
+            <button id="themeBtn" class="theme-btn">🌙</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Plan Your Perfect Trip</h1>
+            <p>Discover amazing destinations and organize your travel plans easily with TripCraft.</p>
+            <a href="planner.html" class="btn">Start Planning</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Everything You Need</h2>
+            <p>Simple tools to make your travel planning easier.</p>
         </div>
 
-        <div>
-            <h4>Contact</h4>
-            <p>📧 tripcraft@example.com</p>
-            <p>📞 +880 1234-567890</p>
-        </div>
-    </div>
+        <div class="feature-grid">
 
-    <div class="footer-bottom">
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>Explore Destinations</h3>
+                <p>Find beautiful places for your next adventure.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🗓️</div>
+                <h3>Plan Your Trip</h3>
+                <p>Create your travel plan with dates and activities.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Manage Budget</h3>
+                <p>Calculate your travel expenses easily.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎒</div>
+                <h3>Packing List</h3>
+                <p>Prepare everything you need before your trip.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Popular Destinations</h2>
+            <p>Explore some popular travel destinations.</p>
+        </div>
+
+        <div class="destination-grid">
+
+            <div class="destination-card">
+                <img src="images/coxs-bazar.jpg" alt="Cox's Bazar">
+
+                <div class="destination-content">
+                    <h3>Cox's Bazar</h3>
+                    <p>Enjoy the world's longest natural sea beach.</p>
+                    <a href="planner.html" class="small-btn">Plan Trip</a>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img src="images/sajek.jpg" alt="Sajek Valley">
+
+                <div class="destination-content">
+                    <h3>Sajek Valley</h3>
+                    <p>Enjoy mountains, clouds and beautiful nature.</p>
+                    <a href="planner.html" class="small-btn">Plan Trip</a>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img src="images/sylhet.jpg" alt="Sylhet">
+
+                <div class="destination-content">
+                    <h3>Sylhet</h3>
+                    <p>Explore tea gardens and beautiful green landscapes.</p>
+                    <a href="planner.html" class="small-btn">Plan Trip</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="center-button">
+            <a href="destinations.html" class="btn">View All Destinations</a>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Plan Your Next Adventure?</h2>
+        <p>Start creating your perfect travel plan today.</p>
+        <a href="planner.html" class="btn">Create Your Trip</a>
+    </section>
+
+    <footer>
         <p>© 2026 TripCraft. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-<script src="js/main.js"></script>
-
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>

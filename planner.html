@@ -1,173 +1,90 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Your Trip - TripCraft</title>
+    <title>Trip Planner - TripCraft</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
     <nav class="navbar">
         <div class="logo">✈️ TripCraft</div>
 
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="planner.html" class="active">Plan Trip</a></li>
-        <li><a href="budget.html">Budget</a></li>
-        <li><a href="packing.html">Packing</a></li>
-        <li><a href="my-trips.html">My Trips</a></li>
-    </ul>
-
-    <button class="theme-btn" id="themeBtn">🌙</button>
-</nav>
-
-
-</header>
-
-<main>
-
-
-<section class="page-header">
-    <span>🗓️ CREATE YOUR JOURNEY</span>
-    <h1>Plan Your Perfect Trip</h1>
-    <p>Build a personalized itinerary for your adventure.</p>
-</section>
-
-<section class="planner-section">
-
-    <div class="planner-form">
-
-        <h2>Trip Information</h2>
-
-        <div class="form-group">
-            <label for="tripName">Trip Name</label>
-            <input
-                type="text"
-                id="tripName"
-                placeholder="e.g. Cox's Bazar Adventure"
-            >
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="planner.html">Planner</a>
+            <a href="budget.html">Budget</a>
+            <a href="packing.html">Packing</a>
+            <a href="my-trips.html">My Trips</a>
+            <button id="themeBtn" class="theme-btn">🌙</button>
         </div>
+    </nav>
 
-        <div class="form-group">
-            <label for="destination">Destination</label>
+    <section class="page-header">
+        <h1>Plan Your Trip</h1>
+        <p>Create your travel plan easily.</p>
+    </section>
 
-            <select id="destination">
-                <option value="">Select Destination</option>
-                <option>Cox's Bazar</option>
-                <option>Sajek Valley</option>
-                <option>Sylhet</option>
-                <option>Bandarban</option>
-                <option>Dhaka</option>
-                <option>Bali</option>
-                <option>Paris</option>
-            </select>
-        </div>
+    <section class="section">
 
-        <div class="form-row">
+        <div class="form-card">
+
+            <h2>Trip Information</h2>
 
             <div class="form-group">
-                <label for="startDate">Start Date</label>
-                <input type="date" id="startDate">
+                <label for="tripName">Trip Name</label>
+                <input type="text" id="tripName" placeholder="Example: Cox's Bazar Tour">
             </div>
 
             <div class="form-group">
-                <label for="endDate">End Date</label>
-                <input type="date" id="endDate">
+                <label for="destination">Destination</label>
+                <select id="destination">
+                    <option value="">Select Destination</option>
+                    <option value="Cox's Bazar">Cox's Bazar</option>
+                    <option value="Sajek Valley">Sajek Valley</option>
+                    <option value="Sylhet">Sylhet</option>
+                    <option value="Bandarban">Bandarban</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Bali">Bali</option>
+                </select>
             </div>
 
-        </div>
+            <div class="form-row">
 
-        <div class="form-group">
-            <label for="travelers">Number of Travelers</label>
-            <input
-                type="number"
-                id="travelers"
-                min="1"
-                value="1"
-            >
-        </div>
-
-        <button class="btn primary-btn" id="createTripBtn">
-            Create Trip ✈️
-        </button>
-
-    </div>
-
-
-    <div class="itinerary-section">
-
-        <div class="itinerary-header">
-            <div>
-                <span>YOUR ITINERARY</span>
-                <h2>Daily Activities</h2>
-            </div>
-
-            <button class="btn secondary-btn" id="addDayBtn">
-                + Add Activity
-            </button>
-        </div>
-
-        <div id="itineraryContainer">
-
-            <div class="day-card">
-
-                <div class="day-header">
-                    <div>
-                        <span>DAY 1</span>
-                        <h3>First Day</h3>
-                    </div>
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate">
                 </div>
 
-                <div class="activity-form">
-
-                    <input
-                        type="text"
-                        placeholder="Activity name"
-                        class="activity-name"
-                    >
-
-                    <input
-                        type="time"
-                        class="activity-time"
-                    >
-
-                    <input
-                        type="text"
-                        placeholder="Location"
-                        class="activity-location"
-                    >
-
-                    <button class="delete-btn">
-                        🗑️
-                    </button>
-
+                <div class="form-group">
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate">
                 </div>
 
             </div>
 
+            <div class="form-group">
+                <label for="travelers">Number of Travelers</label>
+                <input type="number" id="travelers" min="1" value="1">
+            </div>
+
+            <button id="createTripBtn" class="btn">Create Trip</button>
+
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-
-</main>
-
-<footer>
-    <div class="footer-bottom">
+    <footer>
         <p>© 2026 TripCraft. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-<script src="js/main.js"></script>
-
-<script src="js/planner.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/planner.js"></script>
 
 </body>
+
 </html>
